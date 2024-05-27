@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">WishList</string>
+    <string name="label_wish_list">Lista de Desejos</string>
 </resources>

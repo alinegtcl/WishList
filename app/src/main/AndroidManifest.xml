@@ -13,10 +13,9 @@
         android:theme="@style/Theme.WishList"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
-            android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.WishList">
+            android:name=".presentation.view.MyWishListActivity"
+            android:theme="@style/Theme.Material3.Light.NoActionBar"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

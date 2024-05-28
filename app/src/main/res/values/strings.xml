@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">WishList</string>
     <string name="label_wish_list">Lista de Desejos</string>
+    <string name="wish_image">Imagem do Desejo</string>
+    <string name="edit_wish">Editar Desejo</string>
+    <string name="label_you_havent_wishes">Você não tem desejos.</string>
+    <string name="label_add_wish">Adicionar Desejo</string>
 </resources>

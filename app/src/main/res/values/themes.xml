@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.WishList" parent="android:Theme.Material.Light.NoActionBar" >
-        <item name="colorPrimary">@color/blue</item>
+    <style name="Theme.WishList" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
     </style>
 </resources>

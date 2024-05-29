@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import com.luisitolentino.wishlist.databinding.FragmentWishListBinding
 import com.luisitolentino.wishlist.domain.entities.Wish
 import kotlinx.coroutines.launch
@@ -53,7 +54,8 @@ class WishListFragment : Fragment() {
     }
 
     private fun onWishClick(wish: Wish) {
-        Toast.makeText(activity, "Clicou no desejo ${wish.title}", Toast.LENGTH_SHORT).show()
+        val action = WishListFragmentDirections.actionWishListFragmentToDetailWishFragment(wish)
+        findNavController().navigate(action)
     }
 
     private fun onMenuItemClick(wish: Wish) {

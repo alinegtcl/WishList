@@ -9,5 +9,19 @@
         android:id="@+id/wishListFragment"
         android:name="com.luisitolentino.wishlist.presentation.view.WishListFragment"
         android:label="@string/label_wish_list"
-        tools:layout="@layout/fragment_wish_list" />
+        tools:layout="@layout/fragment_wish_list">
+        <action
+            android:id="@+id/action_wishListFragment_to_detailWishFragment"
+            app:destination="@id/detailWishFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailWishFragment"
+        android:name="com.luisitolentino.wishlist.presentation.view.DetailWishFragment"
+        android:label="fragment_detail_wish"
+        tools:layout="@layout/fragment_detail_wish">
+        <argument
+            android:name="selectedWish"
+            app:argType="com.luisitolentino.wishlist.domain.entities.Wish" />
+    </fragment>
+
 </navigation>

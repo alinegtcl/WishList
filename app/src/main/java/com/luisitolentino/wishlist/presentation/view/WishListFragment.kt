@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
@@ -32,6 +31,7 @@ class WishListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         viewModel.getAllWishes()
         setupViewModel()
+        setupAddButton()
     }
 
     private fun setupViewModel() {
@@ -59,8 +59,15 @@ class WishListFragment : Fragment() {
     }
 
     private fun onMenuItemClick(wish: Wish) {
-        Toast.makeText(activity, "Clicou no menu do desejo ${wish.title}", Toast.LENGTH_SHORT)
-            .show()
+        val action = WishListFragmentDirections.actionWishListFragmentToManageWishFragment(wish)
+        findNavController().navigate(action)
+    }
+
+    private fun setupAddButton() {
+        binding.buttonAddNewWish.setOnClickListener {
+            val action = WishListFragmentDirections.actionWishListFragmentToManageWishFragment(null)
+            findNavController().navigate(action)
+        }
     }
 
     override fun onDestroyView() {

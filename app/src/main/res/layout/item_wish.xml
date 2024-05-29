@@ -13,7 +13,7 @@
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:layout_marginEnd="8dp"
-        android:contentDescription="@string/wish_image"
+        android:contentDescription="@string/label_wish_image"
         android:scaleType="centerCrop"
         android:src="@drawable/ic_placeholder" />
 
@@ -27,26 +27,17 @@
             android:id="@+id/textTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Título do Desejo"
+            android:text="@string/label_wish_title"
             android:textColor="@color/primaryTextColor"
             android:textSize="18sp"
             android:textStyle="bold" />
-
-        <!--        <TextView-->
-        <!--            android:id="@+id/textDetails"-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:text="Detalhes do Desejo"-->
-        <!--            android:textSize="14sp"-->
-        <!--            android:textColor="@color/secondaryTextColor"-->
-        <!--            android:layout_marginTop="4dp" />-->
 
         <TextView
             android:id="@+id/textStatus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="Status do Desejo"
+            android:text="@string/label_wish_status"
             android:textColor="@color/tertiaryTextColor"
             android:textSize="14sp"
             android:textStyle="italic" />
@@ -57,7 +48,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="?attr/selectableItemBackgroundBorderless"
-        android:contentDescription="@string/edit_wish"
+        android:contentDescription="@string/label_edit_wish"
         android:padding="4dp"
         android:src="@drawable/ic_edit" />
 

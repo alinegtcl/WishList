@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_wishListFragment_to_detailWishFragment"
             app:destination="@id/detailWishFragment" />
+        <action
+            android:id="@+id/action_wishListFragment_to_manageWishFragment"
+            app:destination="@id/manageWishFragment" />
     </fragment>
     <fragment
         android:id="@+id/detailWishFragment"
@@ -22,6 +25,17 @@
         <argument
             android:name="selectedWish"
             app:argType="com.luisitolentino.wishlist.domain.entities.Wish" />
+    </fragment>
+    <fragment
+        android:id="@+id/manageWishFragment"
+        android:name="com.luisitolentino.wishlist.presentation.view.ManageWishFragment"
+        android:label="@string/label_edit_wish"
+        tools:layout="@layout/fragment_manage_wish">
+        <argument
+            android:name="selectedWish"
+            android:defaultValue="@null"
+            app:argType="com.luisitolentino.wishlist.domain.entities.Wish"
+            app:nullable="true" />
     </fragment>
 
 </navigation>

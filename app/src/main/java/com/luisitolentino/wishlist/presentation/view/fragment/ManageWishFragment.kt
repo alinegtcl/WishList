@@ -82,7 +82,7 @@ class ManageWishFragment : Fragment() {
                 )
             }
             if (isEdit) {
-                // viewModel.update(movie)
+                viewModel.update(wish)
             } else {
                 viewModel.insert(wish)
             }

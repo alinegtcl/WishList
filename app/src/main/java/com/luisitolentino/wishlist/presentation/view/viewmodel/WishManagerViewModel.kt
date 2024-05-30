@@ -46,5 +46,19 @@ class WishManagerViewModel(private val useCase: WishManagerUseCase) : ViewModel(
         }
     }
 
+    fun update(wish: Wish) {
+        viewModelScope.launch {
+            _stateManagement.value = WishManagerState.ShowLoading
+            val response = useCase.update(wish)
+            _stateManagement.value = WishManagerState.HideLoading
+            response.flow(
+                {
+                    _stateManagement.value = WishManagerState.UpdateSuccess
+                }, {
+                    _stateManagement.value = WishManagerState.Failure(it)
+                }
+            )
+        }
+    }
 }
 

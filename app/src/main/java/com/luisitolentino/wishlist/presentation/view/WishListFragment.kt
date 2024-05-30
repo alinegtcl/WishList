@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.luisitolentino.wishlist.databinding.FragmentWishListBinding
-import com.luisitolentino.wishlist.domain.entities.Wish
+import com.luisitolentino.wishlist.domain.model.Wish
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 

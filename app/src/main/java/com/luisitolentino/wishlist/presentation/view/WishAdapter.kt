@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.luisitolentino.wishlist.R
 import com.luisitolentino.wishlist.databinding.ItemWishBinding
-import com.luisitolentino.wishlist.domain.entities.Wish
+import com.luisitolentino.wishlist.domain.model.Wish
 
 class WishAdapter(
     private val onWishClickListener: (Wish) -> Unit,

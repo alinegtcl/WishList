@@ -24,7 +24,7 @@
         tools:layout="@layout/fragment_detail_wish">
         <argument
             android:name="selectedWish"
-            app:argType="com.luisitolentino.wishlist.domain.entities.Wish" />
+            app:argType="com.luisitolentino.wishlist.domain.model.Wish" />
     </fragment>
     <fragment
         android:id="@+id/manageWishFragment"
@@ -34,7 +34,7 @@
         <argument
             android:name="selectedWish"
             android:defaultValue="@null"
-            app:argType="com.luisitolentino.wishlist.domain.entities.Wish"
+            app:argType="com.luisitolentino.wishlist.domain.model.Wish"
             app:nullable="true" />
     </fragment>
 

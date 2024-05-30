@@ -1,6 +1,6 @@
 package com.luisitolentino.wishlist.presentation.view
 
-import com.luisitolentino.wishlist.domain.entities.Wish
+import com.luisitolentino.wishlist.domain.model.Wish
 
 sealed class WishState {
     data object EmptyState : WishState()

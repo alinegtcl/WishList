@@ -13,7 +13,7 @@ import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
 import com.luisitolentino.wishlist.R
 import com.luisitolentino.wishlist.databinding.FragmentManageWishBinding
-import com.luisitolentino.wishlist.domain.entities.Wish
+import com.luisitolentino.wishlist.domain.model.Wish
 
 class ManageWishFragment : Fragment() {
 

@@ -38,7 +38,7 @@ class ManageWishFragment : Fragment() {
 
     private var isEdit by Delegates.notNull<Boolean>()
     private val statusOptions = listOf("Pendente", "Em andamento", "Realizado")
-    private lateinit var wish: Wish
+    private lateinit var newWish: Wish
     private var title = EMPTY_STRING
     private var details = EMPTY_STRING
     private var statusSelected = EMPTY_STRING
@@ -71,21 +71,33 @@ class ManageWishFragment : Fragment() {
         setupView(wish)
         setupImageSelection()
         setupSaveWish()
+        setupDeleteWish()
         setupViewModel()
     }
 
     private fun setupSaveWish() {
         binding.buttonSaveWish.setOnClickListener {
             binding.apply {
-                wish = Wish(
+                newWish = Wish(
                     title, details, statusSelected, image, args.selectedWish?.id ?: 0L
                 )
             }
             if (isEdit) {
-                viewModel.update(wish)
+                viewModel.update(newWish)
             } else {
-                viewModel.insert(wish)
+                viewModel.insert(newWish)
             }
+        }
+    }
+
+    private fun setupDeleteWish() {
+        if (isEdit) {
+            binding.buttonDeletelWish.visibility = View.VISIBLE
+            binding.buttonDeletelWish.setOnClickListener {
+                args.selectedWish?.let { it1 -> viewModel.delete(it1) }
+            }
+        } else {
+            binding.buttonDeletelWish.visibility = View.GONE
         }
     }
 
@@ -190,6 +202,14 @@ class ManageWishFragment : Fragment() {
                     WishManagerState.UpdateSuccess -> {
                         Toast.makeText(
                             requireContext(), "Desejo atualizado com sucesso", Toast.LENGTH_SHORT
+                        ).show()
+                        findNavController().popBackStack()
+                    }
+
+                    WishManagerState.DeleteSuccess -> {
+                        Toast.makeText(
+                            requireContext(),
+                            "Desejo excluído com sucesso", Toast.LENGTH_SHORT
                         ).show()
                         findNavController().popBackStack()
                     }

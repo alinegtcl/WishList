@@ -60,5 +60,22 @@ class WishManagerViewModel(private val useCase: WishManagerUseCase) : ViewModel(
             )
         }
     }
+
+    fun delete(wish: Wish) {
+        viewModelScope.launch {
+            _stateManagement.value = WishManagerState.ShowLoading
+            val response = useCase.delete(wish)
+            _stateManagement.value = WishManagerState.HideLoading
+            response.flow(
+                {
+                    _stateManagement.value = WishManagerState.DeleteSuccess
+
+                },
+                {
+                    _stateManagement.value = WishManagerState.Failure(it)
+                }
+            )
+        }
+    }
 }
 

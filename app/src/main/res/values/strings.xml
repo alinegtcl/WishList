@@ -3,7 +3,7 @@
     <string name="label_wish_list">Lista de Desejos</string>
     <string name="label_wish_image">Imagem do Desejo</string>
     <string name="label_edit_wish">Editar Desejo</string>
-    <string name="label_you_havent_wishes">Você não tem desejos.</string>
+    <string name="label_you_havent_wishes">Você não tem desejos cadastrados ainda.</string>
     <string name="label_add_wish">Adicionar Desejo</string>
     <string name="label_wish_status">Status do desejo</string>
     <string name="label_detail_wish">Detalhes do desejo</string>
@@ -12,4 +12,5 @@
     <string name="label_save">Salvar</string>
     <string name="label_uninformed">Não informado</string>
     <string name="label_wish_photo">Foto do desejo</string>
+    <string name="label_delete_wish">Deletar</string>
 </resources>

@@ -8,7 +8,7 @@
     tools:context=".presentation.view.fragment.ManageWishFragment">
 
     <EditText
-        android:id="@+id/textWishTitle"
+        android:id="@+id/edit_text_wish_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -40,6 +40,14 @@
         android:contentDescription="@string/label_wish_photo"
         android:scaleType="centerCrop" />
 
+    <ProgressBar
+        android:id="@+id/loadingWishList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminateTint="@color/colorPrimary"
+        android:indeterminateTintMode="src_atop" />
+
     <Button
         android:id="@+id/buttonSaveWish"
         android:layout_width="match_parent"
@@ -47,4 +55,5 @@
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
         android:text="@string/label_save" />
+
 </LinearLayout>

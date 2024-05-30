@@ -1,7 +1,7 @@
 # wish list - Lista dos desejos
 
 Projeto final da disciplina Tópicos em Dispositivos Móveis – Especialização em Sistemas para
-Dispositivos Móveis IFSP. Aplicativo de lista dos desejos, uma estratégia da lei da atração.
+Dispositivos Móveis IFSP.
 
 ## Enunciado
 
@@ -20,15 +20,16 @@ GitHub CoPilot ou outra).
 
 ## Como foi desenvolvido
 
+Escolhi fazer um aplicativo simples de lista dos desejos, uma estratégia da lei da atração.
+
 O projeto foi desenvolvido para android utilizando kotlin e xml.
 
 O layout praticamente todo foi feito pela IA, fiz poucas intervenções, mantive como ficou, foi feito
-pelo chat gpt com algumas pitadas do Gemini.
+pelo ChatGpt com algumas pitadas do Gemini.
 
-A parte lógica de view a IA dominou bem, mas com pontuações da minha parte para correção,
-principalmente na parte de IA, acabou que o Gemini se saiu melhor no uso da biblioteca Glide.
+A parte lógica da view a IA dominou razoavelmente, mas com pontuações da minha parte para correção,
+principalmente na parte da imagem, acabou que o Gemini se saiu melhor no uso da biblioteca Glide.
 
 A parte de persistência não gostei muito do rumo que foi levando e acabei fazendo como estou
-acostumada, só utilizando mesmo auto complete no Android Studio com algumas gerações de código pelo
-Gemini.
+acostumada, só utilizando mesmo auto complete com algumas gerações de código pelo Gemini.
 

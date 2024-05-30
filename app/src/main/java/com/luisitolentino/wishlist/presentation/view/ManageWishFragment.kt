@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
@@ -24,9 +25,11 @@ class ManageWishFragment : Fragment() {
     private val viewModel: WishManagerViewModel by viewModels()
 
     private val getContent =
-        registerForActivityResult(ActivityResultContracts.GetContent()) { uri ->
+        registerForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
             uri?.let {
-                Glide.with(this@ManageWishFragment).load(uri).placeholder(R.drawable.ic_placeholder)
+                Glide.with(this@ManageWishFragment)
+                    .load(uri)
+                    .placeholder(R.drawable.ic_placeholder)
                     .into(binding.imageWish)
             }
         }
@@ -64,6 +67,8 @@ class ManageWishFragment : Fragment() {
 
                 buttonSaveWish.text = getString(R.string.label_edit_wish)
             } else {
+                (activity as? AppCompatActivity)?.supportActionBar?.title =
+                    getString(R.string.label_add_wish)
                 textWishTitle.setText(getString(R.string.label_add_wish))
                 buttonSaveWish.text = getString(R.string.label_add_wish)
             }
@@ -83,7 +88,7 @@ class ManageWishFragment : Fragment() {
     }
 
     private fun openImagePicker() {
-        getContent.launch("image/*")
+        getContent.launch(arrayOf("image/*"))
     }
 
     override fun onDestroyView() {

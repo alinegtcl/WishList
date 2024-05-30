@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.view.DetailWishFragment">
+    tools:context=".presentation.view.fragment.DetailWishFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,9 +21,9 @@
 
         <ImageView
             android:id="@+id/imageWish"
-            android:importantForAccessibility="no"
             android:layout_width="match_parent"
             android:layout_height="200dp"
+            android:importantForAccessibility="no"
             android:scaleType="centerCrop"
             android:src="@drawable/ic_placeholder" />
 

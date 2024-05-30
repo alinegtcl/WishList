@@ -1,4 +1,4 @@
-package com.luisitolentino.wishlist.presentation.view
+package com.luisitolentino.wishlist.presentation.view.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,6 +9,9 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.luisitolentino.wishlist.databinding.FragmentWishListBinding
 import com.luisitolentino.wishlist.domain.model.Wish
+import com.luisitolentino.wishlist.presentation.view.adapter.WishAdapter
+import com.luisitolentino.wishlist.presentation.view.viewmodel.WishManagerViewModel
+import com.luisitolentino.wishlist.presentation.view.viewmodel.WishState
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 

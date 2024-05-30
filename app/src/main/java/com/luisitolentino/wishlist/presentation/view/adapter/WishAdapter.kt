@@ -1,4 +1,4 @@
-package com.luisitolentino.wishlist.presentation.view
+package com.luisitolentino.wishlist.presentation.view.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

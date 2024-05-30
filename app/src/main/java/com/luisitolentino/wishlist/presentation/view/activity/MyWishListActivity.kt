@@ -1,4 +1,4 @@
-package com.luisitolentino.wishlist.presentation.view
+package com.luisitolentino.wishlist.presentation.view.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

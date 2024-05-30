@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/wishListFragment"
-        android:name="com.luisitolentino.wishlist.presentation.view.WishListFragment"
+        android:name="com.luisitolentino.wishlist.presentation.view.fragment.WishListFragment"
         android:label="@string/label_wish_list"
         tools:layout="@layout/fragment_wish_list">
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/detailWishFragment"
-        android:name="com.luisitolentino.wishlist.presentation.view.DetailWishFragment"
+        android:name="com.luisitolentino.wishlist.presentation.view.fragment.DetailWishFragment"
         android:label="fragment_detail_wish"
         tools:layout="@layout/fragment_detail_wish">
         <argument
@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/manageWishFragment"
-        android:name="com.luisitolentino.wishlist.presentation.view.ManageWishFragment"
+        android:name="com.luisitolentino.wishlist.presentation.view.fragment.ManageWishFragment"
         android:label="@string/label_edit_wish"
         tools:layout="@layout/fragment_manage_wish">
         <argument

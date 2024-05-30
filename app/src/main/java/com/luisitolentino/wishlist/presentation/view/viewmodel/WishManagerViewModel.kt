@@ -1,4 +1,4 @@
-package com.luisitolentino.wishlist.presentation.view
+package com.luisitolentino.wishlist.presentation.view.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -26,3 +26,4 @@ class WishManagerViewModel(private val useCase: WishManagerUseCase) : ViewModel(
     }
 
 }
+

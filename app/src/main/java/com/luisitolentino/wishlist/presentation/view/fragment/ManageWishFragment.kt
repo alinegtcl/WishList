@@ -1,4 +1,4 @@
-package com.luisitolentino.wishlist.presentation.view
+package com.luisitolentino.wishlist.presentation.view.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -14,6 +14,7 @@ import com.bumptech.glide.Glide
 import com.luisitolentino.wishlist.R
 import com.luisitolentino.wishlist.databinding.FragmentManageWishBinding
 import com.luisitolentino.wishlist.domain.model.Wish
+import com.luisitolentino.wishlist.presentation.view.viewmodel.WishManagerViewModel
 
 class ManageWishFragment : Fragment() {
 
